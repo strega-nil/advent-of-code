@@ -9,6 +9,10 @@ fn isdigit(c: u8) -> bool {
   c >= b'0' && c <= b'9'
 }
 
+fn isspace(c: u8) -> bool {
+  c == b' ' || c == b'\n' || c == b'\t'
+}
+
 fn main() {
   let mut inp = Vec::new();
   File::open("day3.txt").unwrap().read_to_end(&mut inp).unwrap();
